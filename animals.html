@@ -1,0 +1,49 @@
+	<!doctype html>
+
+<html>
+  <head>
+    <title>Animals</title>
+    
+    <style>
+      div {
+        border: 1px solid black;
+        background-image: url(horse.jpg);
+        background-repeat: no-repeat;
+        float: left;
+        height: 100px;
+        margin: 10px;
+        width: 100px;
+        background-size: 100%;
+      }
+      
+      p {
+        color: white;
+        font-family: Tahoma, sans-serif;
+        font-weight: bold;
+        text-align: center;
+      }
+      
+      img {
+        height: 100px;
+        width: 100px;
+      }
+    </style>
+  </head>
+  
+  <body>
+    <div id="horse" onmouseover="showWorld()" onmouseout="showImage()">
+		</div>
+		
+	<script>
+		function showWorld() {   
+		var card = document.getElementById('horse');
+		card.innerHTML = '<p>horse</p>';
+		}
+		
+		function showImage() {
+		var card = document.getElementById('horse');
+		card.innerHTML = '<img src="horse.jpg">';
+		}
+	</script>
+  </body>
+</html>

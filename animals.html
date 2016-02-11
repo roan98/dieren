@@ -5,9 +5,20 @@
     <title>Animals</title>
     
     <style>
-      div {
+      #horse {
         border: 1px solid black;
         background-image: url(horse.jpg);
+        background-repeat: no-repeat;
+        float: left;
+        height: 100px;
+        margin: 10px;
+        width: 100px;
+        background-size: 100%;
+      }
+
+      #turtle {
+        border: 1px solid black;
+        background-image: url(turtle.jpg);
         background-repeat: no-repeat;
         float: left;
         height: 100px;
@@ -33,6 +44,9 @@
   <body>
     <div id="horse" onmouseover="showWorld()" onmouseout="showImage()">
 		</div>
+
+    <div id="turtle" onmouseover="laatzien()" onmouseout="laatplaatje()">
+    </div>
 		
 	<script>
 		function showWorld() {   
@@ -44,6 +58,17 @@
 		var card = document.getElementById('horse');
 		card.innerHTML = '<img src="horse.jpg">';
 		}
+
+    function laatzien() {   
+    var card = document.getElementById('turtle');
+    card.innerHTML = '<p>turtle</p>';
+    }
+
+    function laatplaatje() {
+    var card = document.getElementById('turtle');
+    card.innerHTML = '<img src="turtle.jpg">';
+    }
+
 	</script>
   </body>
 </html>
